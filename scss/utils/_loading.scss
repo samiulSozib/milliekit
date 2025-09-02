@@ -1,0 +1,124 @@
+.loading {
+  &__circle_1 {
+    -webkit-animation: animation_circle_1 1.2s linear infinite normal forwards;
+    animation: animation_circle_1 1.2s linear infinite normal forwards;
+  }
+
+  &__circle_2 {
+    -webkit-animation: animation_circle_2 1.2s linear infinite normal forwards;
+    animation: animation_circle_2 1.2s linear infinite normal forwards;
+  }
+
+  &__circle_3 {
+    -webkit-animation: animation_circle_3 1.2s linear infinite normal forwards;
+    animation: animation_circle_3 1.2s linear infinite normal forwards;
+  }
+}
+
+@-webkit-keyframes animation_circle_1 {
+  0% {
+    opacity: 0.9;
+  }
+
+  33.333333% {
+    opacity: 0.6;
+  }
+
+  66.666667% {
+    opacity: 0.3;
+  }
+
+  to {
+    opacity: 0.9;
+  }
+}
+
+@keyframes animation_circle_1 {
+  0% {
+    opacity: 0.9;
+  }
+
+  33.333333% {
+    opacity: 0.6;
+  }
+
+  66.666667% {
+    opacity: 0.3;
+  }
+
+  to {
+    opacity: 0.9;
+  }
+}
+
+@-webkit-keyframes animation_circle_2 {
+  0% {
+    opacity: 0.6;
+  }
+
+  33.333333% {
+    opacity: 0.3;
+  }
+
+  66.666667% {
+    opacity: 0.9;
+  }
+
+  to {
+    opacity: 0.6;
+  }
+}
+
+@keyframes animation_circle_2 {
+  0% {
+    opacity: 0.6;
+  }
+
+  33.333333% {
+    opacity: 0.3;
+  }
+
+  66.666667% {
+    opacity: 0.9;
+  }
+
+  to {
+    opacity: 0.6;
+  }
+}
+
+@-webkit-keyframes animation_circle_3 {
+  0% {
+    opacity: 0.3;
+  }
+
+  33.333333% {
+    opacity: 0.9;
+  }
+
+  66.666667% {
+    opacity: 0.6;
+  }
+
+  to {
+    opacity: 0.3;
+  }
+}
+
+@keyframes animation_circle_3 {
+  0% {
+    opacity: 0.3;
+  }
+
+  33.333333% {
+    opacity: 0.9;
+  }
+
+  66.666667% {
+    opacity: 0.6;
+  }
+
+  to {
+    opacity: 0.3;
+  }
+}

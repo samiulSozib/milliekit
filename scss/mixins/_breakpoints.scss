@@ -1,0 +1,84 @@
+// theme is a tailwind function
+@mixin breakpoint-min-xs {
+  // 280px
+  @media (min-width: theme('screens.xs')) {
+    @content;
+  }
+}
+
+@mixin breakpoint-min-sm {
+  // 640px
+  @media (min-width: theme('screens.sm')) {
+    @content;
+  }
+}
+
+@mixin breakpoint-min-md {
+  // 768px
+  @media (min-width: theme('screens.md')) {
+    @content;
+  }
+}
+
+@mixin breakpoint-min-lg {
+  // 1024px
+  @media (min-width: theme('screens.lg')) {
+    @content;
+  }
+}
+
+@mixin breakpoint-min-xl {
+  // 1280px
+  @media (min-width: theme('screens.xl')) {
+    @content;
+  }
+}
+
+@mixin breakpoint-min-2xl {
+  // 1536px
+  @media (min-width: theme('screens.2xl')) {
+    @content;
+  }
+}
+
+@mixin breakpoint-max-xs {
+  // 280px
+  @media (max-width: calc(theme('screens.xs') - 1px)) {
+    @content;
+  }
+}
+
+@mixin breakpoint-max-sm {
+  // 640px
+  @media (max-width: calc(theme('screens.sm') - 1px)) {
+    @content;
+  }
+}
+
+@mixin breakpoint-max-md {
+  // 768px
+  @media (max-width: calc(theme('screens.md') - 1px)) {
+    @content;
+  }
+}
+
+@mixin breakpoint-max-lg {
+  // 1024px
+  @media (max-width: calc(theme('screens.lg') - 1px)) {
+    @content;
+  }
+}
+
+@mixin breakpoint-max-xl {
+  // 1280px
+  @media (max-width: theme('screens.xl')) {
+    @content;
+  }
+}
+
+@mixin breakpoint-max-2xl {
+  // 1536px
+  @media (min-width: theme('screens.2xl')) {
+    @content;
+  }
+}

@@ -1,0 +1,65 @@
+@mixin underline-hover($thickness: 1px, $padding-bottom: 0.125rem, $duration: 0.5s) {
+  position: relative;
+  padding-bottom: $padding-bottom;
+  line-height: 1rem;
+
+  &::before {
+    background-color: transparent;
+  }
+
+  &::before,
+  &::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: $padding-bottom auto auto;
+    display: block;
+    height: $thickness;
+    width: 100%;
+    content: var(--tw-content);
+  }
+
+  &::after {
+    right: 0;
+    --tw-scale-x: 0;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x))
+      skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+    background-color: currentColor;
+    transition: transform $duration cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &:hover::before,
+  &:hover::after {
+    content: var(--tw-content);
+  }
+
+  &:hover::after {
+    --tw-scale-x: 1;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x))
+      skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+
+  &:focus::before,
+  &:focus::after {
+    content: var(--tw-content);
+  }
+
+  &:focus::after {
+    --tw-scale-x: 1;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x))
+      skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+}
+
+.underline-hover {
+  @include underline-hover();
+
+  &.default-show::before {
+    content: var(--tw-content);
+    background-color: currentColor;
+  }
+
+  &.thick {
+    @include underline-hover(0.125rem, 0.5rem);
+  }
+}

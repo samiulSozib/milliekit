@@ -1,0 +1,86 @@
+.content-entry {
+  line-height: 2;
+  font-size: 0.88rem;
+  color: #333;
+
+  h1,
+  h2,
+  h3 {
+    font-weight: bold;
+    margin: 1.5rem 0 1rem;
+
+    &::after {
+      content: '';
+      display: block;
+      width: 2rem;
+      height: 2px;
+      background-color: #dedde0;
+      margin-top: 5px;
+    }
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  h3 {
+    font-size: 1.1rem;
+  }
+
+  h4,
+  h5,
+  h6 {
+    font-size: 1rem;
+  }
+
+  strong,
+  b {
+    @include font-semibold;
+  }
+
+  p {
+    margin: 0.5rem 0;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  ul {
+    margin: 1rem 0;
+    list-style-type: circle;
+    margin-right: 16px;
+
+    li {
+      margin-bottom: 0.5rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    margin: 1rem 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  a {
+    color: #3498db;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  // Adding spacing for empty tags
+  br + br {
+    display: none; // To handle redundant <br> tags
+  }
+}

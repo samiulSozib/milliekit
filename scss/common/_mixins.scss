@@ -1,0 +1,78 @@
+/*
+Mixin: Media Queries
+*/
+@mixin until($device) {
+  @media screen and (max-width: $device) {
+    @content;
+  }
+}
+
+@mixin from($device) {
+  @media screen and (min-width: $device) {
+    @content;
+  }
+}
+
+/*
+Mixin: Font Weight
+*/
+@mixin font-light {
+  font-weight: 100;
+  font-variation-settings: 'wght' 100;
+}
+
+@mixin font-normal {
+  font-weight: 300;
+  font-variation-settings: 'wght' 300;
+}
+
+@mixin font-medium {
+  font-weight: 500;
+  font-variation-settings: 'wght' 500;
+}
+
+@mixin font-semibold {
+  font-weight: 600;
+  font-variation-settings: 'wght' 600;
+}
+
+@mixin font-bold {
+  font-weight: 800;
+  font-variation-settings: 'wght' 800;
+}
+
+@mixin font-extrabold {
+  font-weight: 900;
+  font-variation-settings: 'wght' 900;
+}
+
+/* Important */
+@mixin font-light-i {
+  font-weight: 100 !important;
+  font-variation-settings: 'wght' 100 !important;
+}
+
+@mixin font-normal-i {
+  font-weight: 300 !important;
+  font-variation-settings: 'wght' 300 !important;
+}
+
+@mixin font-medium-i {
+  font-weight: 500 !important;
+  font-variation-settings: 'wght' 500 !important;
+}
+
+@mixin font-semibold-i {
+  font-weight: 600 !important;
+  font-variation-settings: 'wght' 600 !important;
+}
+
+@mixin font-bold-i {
+  font-weight: 800 !important;
+  font-variation-settings: 'wght' 800 !important;
+}
+
+@mixin font-extrabold-i {
+  font-weight: 900 !important;
+  font-variation-settings: 'wght' 900 !important;
+}

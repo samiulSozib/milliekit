@@ -1,0 +1,27 @@
+.Portal {
+  &--center {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &--middle {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &--top {
+    top: calc(var(--header-top-height) + var(--header-menu-height));
+  }
+
+  &--bottom {
+    bottom: calc(var(--footer-height));
+  }
+
+  &--right {
+    right: calc(var(--footer-height));
+  }
+
+  &--left {
+    left: calc(var(--footer-height));
+  }
+}

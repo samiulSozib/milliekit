@@ -1,0 +1,173 @@
+/* Generic styles for the application */
+html {
+  font-size: 16px;
+}
+
+body {
+  direction: rtl;
+  min-width: var(--breakpoint-xs);
+  overflow-x: hidden;
+}
+
+[dir='ltr'] {
+  body {
+    direction: ltr;
+    font-family: var(--font-secondary);
+  }
+
+  .ltr-rotate {
+    transform: rotate(180deg);
+  }
+
+  input {
+    direction: ltr !important;
+    text-align: left;
+    font-family: var(--font-secondary) !important;
+  }
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+/* Containers */
+.container-fluid {
+  max-width: var(--container-max-width);
+  padding-right: var(--container-spacing);
+  padding-left: var(--container-spacing);
+  margin: auto;
+}
+
+.wrapper {
+  position: relative;
+}
+
+.app-page-wrapper {
+  height: 100%;
+  position: relative;
+}
+
+.section-spacing {
+  margin-top: var(--section-spacing--desktop);
+
+  @include breakpoint-max-md {
+    margin-top: var(--section-spacing--mobile);
+  }
+}
+
+/* Links */
+a {
+  color: var(--color-link);
+  transition: color ease-in-out 0s;
+}
+
+a.hover {
+  position: relative;
+
+  &:after {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: -2px;
+    width: 0;
+    height: 1px;
+    background: currentColor;
+    transition: width 0.4s;
+  }
+
+  &:hover {
+    &:after {
+      width: 100%;
+    }
+  }
+}
+
+/* Images */
+img[alt] {
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  &:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color: transparent;
+    text-align: center;
+    content: attr(alt);
+    background: #fff url('/assets/images/misc/image-placeholder.svg') no-repeat 50%;
+    /* https://github.com/Aljullu/react-lazy-load-image-component */
+    /* https://ollylut.medium.com/how-to-load-images-with-react-2da8dad9beef */
+    /* IntersectionObserver */
+    background-size: contain;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+/* Inputs */
+@media (max-width: 768px) {
+  input,
+  textarea,
+  select {
+    &:not(:read-only) {
+      font-size: 16px !important;
+    }
+  }
+}
+
+/* Direction */
+.direction-ltr {
+  direction: ltr;
+}
+
+/* Shadows */
+.shadow-green {
+  box-shadow: 0px 8px 16px rgba(0, 171, 85, 0.24);
+}
+
+.shadow-violet {
+  box-shadow: 0px 0px 2px #8576ff;
+}
+
+.shadow-blue {
+  box-shadow: 0px 0px 2px #1f5dc1;
+}
+
+.shadow-gray-5 {
+  box-shadow: 0 0 0 1px #919eab80;
+}
+
+.shadow-gray-10 {
+  box-shadow: 0px 0px 12px rgba(145, 158, 171, 0.32);
+}
+
+.shadow-quaternary {
+  box-shadow: 0px 0px 2px rgba(145, 158, 171, 0.2), 0px 12px 24px -4px rgba(145, 158, 171, 0.12);
+}
+
+/* Buttons */
+.shadow-button-success {
+  box-shadow: 0px 8px 16px rgba(0, 171, 85, 0.24);
+}
+
+.shadow-button-primary {
+  box-shadow: 0px 8px 16px rgba(23, 66, 137, 0.16);
+}
+
+/* Loading */
+body.--loading .TripResults__loading {
+  visibility: visible;
+  opacity: 1;
+  scale: 1;
+  z-index: var(--z-10);
+}
+
+body.--loading .module-bus-booking-page {
+  overflow: hidden;
+  pointer-events: none;
+}

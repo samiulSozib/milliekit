@@ -1,0 +1,24 @@
+.spinner {
+  display: inline-block;
+  -webkit-animation: spinnerCircle 0.7s infinite linear;
+  animation: spinnerCircle 0.7s infinite linear;
+
+  &--turbo {
+    -webkit-animation: spinnerCircle 0.45s infinite linear;
+    animation: spinnerCircle 0.45s infinite linear;
+  }
+}
+
+@-webkit-keyframes spinnerCircle {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spinnerCircle {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}

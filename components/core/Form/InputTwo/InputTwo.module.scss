@@ -1,0 +1,81 @@
+.FormControl {
+  border: 1px solid var(--input-border-color);
+  background: var(--input-border-bg);
+  border-radius: var(--input-border-radius);
+  box-shadow: var(--input-box-shadow);
+  padding: 0.3rem 0.5rem;
+  row-gap: 0.1rem !important;
+  font-size: 16px;
+
+  .Label {
+    font-size: 10px;
+    color: var(--color-gray-500);
+  }
+
+  .Input {
+    font-family: var(--font-primary);
+    width: 100%;
+    outline: none;
+    direction: rtl;
+    transition: all 0.3s ease 0s;
+    display: block;
+    font-size: 13px;
+    background: transparent;
+    caret-color: transparent;
+
+    &:focus {
+      border-color: var(--input-border-color-focus);
+    }
+
+    &::-webkit-input-placeholder {
+      font-size: 0.8rem;
+    }
+    &:-moz-placeholder {
+      font-size: 0.8rem;
+    }
+    &::-moz-placeholder {
+      font-size: 0.8rem;
+    }
+    &:-ms-input-placeholder {
+      font-size: 0.8rem;
+    }
+  }
+}
+
+.isInvalid {
+  border-color: var(--color-error) !important;
+}
+
+.PrefixIcon {
+  @apply absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none;
+}
+
+.SuffixIcon {
+  @apply absolute left-3 top-1/2 -translate-y-1/2 pointer-events-none;
+}
+
+.withPrefix {
+  @apply pr-9;
+}
+
+.withSuffix {
+  @apply pl-9;
+}
+
+[dir='ltr'] {
+  .PrefixIcon {
+    @apply left-3 right-auto;
+  }
+
+  .SuffixIcon {
+    @apply right-3 left-auto;
+  }
+
+  .withPrefix {
+    @apply pr-0 pl-9;
+  }
+
+  .withSuffix {
+    @apply pl-0 pr-9;
+  }
+}

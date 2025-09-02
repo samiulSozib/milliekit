@@ -1,0 +1,91 @@
+.TicketReceipt {
+  position: relative;
+
+  --receipt-background: #f9f9f9;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    filter: drop-shadow(0px 3.6875px 3.6875px rgba(0, 0, 0, 0.25));
+    border-radius: 15px;
+    z-index: 1;
+    background: var(--receipt-background);
+  }
+
+  &__inner {
+    position: relative;
+  }
+
+  &__ticketInfo {
+    width: 100%;
+
+    &__item {
+      font-size: var(--font-size-xxs);
+      display: flex;
+      flex-flow: column nowrap;
+      align-items: center;
+      text-align: center;
+      row-gap: 0.5rem;
+      padding-bottom: 1rem;
+
+      &__title {
+        color: #8a8acc;
+      }
+
+      &__value {
+        color: #000033;
+      }
+    }
+  }
+
+  &__separator {
+    --half-circle-size: 3rem;
+
+    &::before {
+      content: '';
+      position: relative;
+      width: 100%;
+      height: 1px;
+      border-bottom: 1px dashed #bababa;
+      display: block;
+      z-index: var(--z-10);
+    }
+
+    &__inner {
+      &:before,
+      &:after {
+        content: '';
+        position: absolute;
+        background: tra;
+        width: var(--half-circle-size);
+        height: var(--half-circle-size);
+        border-radius: 100%;
+        margin-top: calc(var(--half-circle-size) / -2);
+        z-index: var(--z-10);
+        background: #fff;
+      }
+
+      &:before {
+        right: 0;
+        margin-right: calc(var(--half-circle-size) / -2);
+        background-image: url('/assets/images/misc/receipt-shadow-before-sprites.svg');
+        background-position: -1px -91px;
+        background-repeat: no-repeat;
+        // box-shadow: 14px 1px 15px -12px #00000066 inset;
+      }
+
+      &:after {
+        left: 0;
+        margin-left: calc(var(--half-circle-size) / -2);
+        background-image: url('/assets/images/misc/receipt-shadow-after-sprites.svg');
+        background-position: 22px -90px;
+        background-repeat: no-repeat;
+        // box-shadow: -14px 1px 15px -12px #00000066 inset;
+      }
+    }
+  }
+}

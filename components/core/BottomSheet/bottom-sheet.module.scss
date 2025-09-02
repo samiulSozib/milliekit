@@ -1,0 +1,39 @@
+@import '../../../scss/common/global';
+
+.BottomSheet {
+  background-color: rgba(0, 0, 0, 0.3);
+  // will-change: transform;
+  // transition: -webkit-transform 0.3s ease;
+  // transition: transform 0.3s ease;
+  // transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+  // -webkit-transition: transform 0.3s ease;
+  // -o-transition: transform 0.3s ease;
+  // -moz-transition: transform 0.3s ease;
+
+  .BottomSheet__content {
+    will-change: transform;
+    transition-property: transform;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 0.3s;
+    box-shadow: 0 0 12px #030a161a;
+    border-radius: var(--border-radius-large) var(--border-radius-large) 0 0;
+    transform: translateY(100%);
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    @include from(var(--view-port-desktop)) {
+      border-radius: var(--border-radius-large);
+    }
+
+    &--desktop {
+      bottom: 50%;
+      max-height: 80vh;
+      max-width: 400px;
+    }
+
+    &--mobile {
+      bottom: 0;
+      max-height: 100%;
+      max-width: 100%;
+    }
+  }
+}

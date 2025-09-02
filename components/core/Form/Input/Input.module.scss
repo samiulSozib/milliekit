@@ -1,0 +1,79 @@
+.Input,
+.Textarea {
+  font-family: var(--font-primary);
+  border: 1px solid var(--input-border-color);
+  background: var(--input-border-bg);
+  border-radius: var(--input-border-radius);
+  box-shadow: var(--input-box-shadow);
+  padding: 0 var(--input-padding);
+  width: 100%;
+  outline: none;
+  direction: rtl;
+  transition: all 0.3s ease 0s;
+  display: block;
+  font-size: 16px;
+
+  &:focus {
+    border-color: var(--input-border-color-focus);
+  }
+
+  &::-webkit-input-placeholder {
+    font-size: 0.9em;
+  }
+  &:-moz-placeholder {
+    font-size: 0.9em;
+  }
+  &::-moz-placeholder {
+    font-size: 0.9em;
+  }
+  &:-ms-input-placeholder {
+    font-size: 0.9em;
+  }
+}
+
+.Input {
+  height: 2.9rem;
+}
+
+.Textarea {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.isInvalid {
+  border-color: var(--color-error) !important;
+}
+
+.PrefixIcon {
+  @apply absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none;
+}
+
+.SuffixIcon {
+  @apply absolute left-3 top-1/2 -translate-y-1/2 pointer-events-none;
+}
+
+.withPrefix {
+  @apply pr-9;
+}
+
+.withSuffix {
+  @apply pl-9;
+}
+
+[dir='ltr'] {
+  .PrefixIcon {
+    @apply left-3 right-auto;
+  }
+
+  .SuffixIcon {
+    @apply right-3 left-auto;
+  }
+
+  .withPrefix {
+    @apply pr-0 pl-9;
+  }
+
+  .withSuffix {
+    @apply pl-0 pr-9;
+  }
+}

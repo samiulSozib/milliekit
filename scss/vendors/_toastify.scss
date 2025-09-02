@@ -1,0 +1,12 @@
+.Toastify {
+  &__toast {
+    font-family: var(--font-primary) !important;
+    font-size: 0.82rem;
+    color: var(--color-global) !important;
+    @include font-semibold;
+
+    &-body > div:last-child {
+      margin-top: 0.3rem;
+    }
+  }
+}

@@ -1,0 +1,24 @@
+@import '../../../scss/common/global';
+
+.Modal {
+  &__content {
+    max-height: 90vh;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    transition: all 2.5s ease;
+    overflow-y: auto; /* Enable vertical scrolling */
+    outline: none;
+
+    @include from(1024px) {
+      max-width: 80vw;
+      min-width: 460px;
+    }
+
+    @include until(768px) {
+      width: 90% !important;
+      max-height: 70vh;
+    }
+  }
+}

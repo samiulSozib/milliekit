@@ -1,0 +1,22 @@
+.LocationInput {
+  position: relative;
+  font-family: var(--font-primary);
+  border: 1px solid var(--input-border-color);
+  background: var(--input-border-bg);
+  border-radius: var(--input-border-radius);
+  box-shadow: var(--input-box-shadow);
+  padding: 0.1rem 0.5rem;
+
+  &__inputWrapper {
+    padding-bottom: 0.15rem;
+
+    input {
+      width: 100%;
+      outline: none;
+      background: transparent;
+      font-size: 13px;
+      width: 100%;
+      caret-color: transparent;
+    }
+  }
+}

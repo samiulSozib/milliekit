@@ -1,0 +1,7 @@
+@include until(355px) {
+  .ant-pagination .ant-pagination-item {
+    min-width: 29px !important;
+    height: 29px !important;
+    margin-inline-end: 0 !important;
+  }
+}

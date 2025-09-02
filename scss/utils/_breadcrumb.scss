@@ -1,0 +1,24 @@
+.breadcrumb {
+  display: flex;
+  font-size: var(--font-size-xsm);
+  // color: #adb5bd;
+  flex-flow: row wrap;
+  line-height: 2;
+
+  .breadcrumb-item {
+    &__separator {
+      margin-right: 0.6rem;
+      margin-left: 0.6rem;
+      color: #adb5bd !important;
+    }
+
+    span,
+    a {
+      color: #64656d;
+    }
+
+    a:hover {
+      color: #000;
+    }
+  }
+}

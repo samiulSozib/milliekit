@@ -1,0 +1,157 @@
+:root {
+  --color-primary: #8576ff;
+  --color-primary-darker: #7a6af5;
+  --color-primary-lighter: #998cfa;
+  --color-secondary: #1c1678;
+  --color-secondary-darker: #19136d;
+  --color-secondary-transparent: rgba(28, 22, 120, 0.9);
+  --color-tertiary: #7bc9ff;
+  --color-quaternary: #eef4ff;
+  --color-link: #1890ff;
+  --bg-color-primary: #fff;
+  --border-radius-medium: 8px;
+  --border-radius-large: 16px;
+  --border-color-primary: #e4e4e4;
+  --border-color-secondary: #e0e0e0;
+  --border-color-light: #f5f5f5;
+  --color-success: #00ab55;
+  --color-error: #ff4842;
+  --color-notice: #ffc107;
+  --color-muted: #919eab;
+  --color-disabled: #adadad;
+  --color-global: #000;
+  --color-select: #1f5dc1;
+  --mobile-bar-bg: #f9fafb;
+  --color-title: #00ced1;
+  --color-gray-200: #f4f6f8;
+  --color-gray-300: #dfe3e8;
+  --color-gray-400: #c4cdd5;
+  --color-gray-500: #919eab;
+  --color-gray-600: #637381;
+  --color-gray-700: #454f5b;
+  --color-gray-800: #212b36;
+
+  // Breakpoints
+  --breakpoint-xs: 280px;
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
+
+  // Header Size
+  --header-height-sm: 52px;
+  --header-height-md: 60px;
+  --header-height-lg: 120px;
+  --header-height-xl: 120px;
+  --header-height-2xl: 120px;
+
+  // Spacing
+  --container-max-width: 640px;
+  --container-spacing: 24px;
+  --section-spacing--desktop: 6rem;
+  --section-spacing--mobile: 4.5rem;
+  --wrapper-bottom-spacing-default: 7rem;
+
+  // Theme
+  --mobile-bar-height: 75px;
+
+  // z-index
+  ---z-999: -999;
+  ---z-1: -1;
+  --z-0: 0;
+  --z-1: 1;
+  --z-10: 10;
+  --z-20: 20;
+  --z-30: 30;
+  --z-40: 40;
+  --z-50: 50;
+  --z-999: 999;
+  --z-auto: auto;
+
+  // Font
+  --font-primary: 'iranyekan', sans-serif;
+  --font-secondary: 'Roboto', sans-serif;
+
+  --font-size-xxs: 0.65rem; /* 12px */
+  --line-height-xxs: 1.15rem; /* ~18px */
+
+  --font-size-xs: 0.75rem; /* 12px */
+  --line-height-xs: 1.15rem; /* ~18px */
+
+  --font-size-xsm: 0.83rem; /* ~13px */
+  --line-height-xsm: 1.3rem; /* ~21px */
+
+  --font-size-sm: 0.875rem; /* 14px */
+  --line-height-sm: 1.4rem; /* ~22px */
+
+  --font-size-md: 0.9rem; /* ~14px */
+  --line-height-md: 1.025rem; /* ~16px */
+
+  --font-size-xmd: 0.95rem; /* ~15px */
+  --line-height-xmd: 1.05rem; /* ~17px */
+
+  --font-size-base: 1rem; /* 16px */
+  --line-height-base: 1.65rem; /* ~26px */
+
+  --font-size-xbase: 1.05rem; /* ~17px */
+  --line-height-xbase: 1.65rem; /* ~26px */
+
+  --font-size-lg: 1.125rem; /* 18px */
+  --line-height-lg: 1.9rem; /* ~30px */
+
+  --font-size-xl: 1.25rem; /* 20px */
+  --line-height-xl: 1.9rem; /* ~30px */
+
+  --font-size-2xl: 1.5rem; /* 24px */
+  --line-height-2xl: 2.15rem; /* ~34px */
+
+  --font-size-3xl: 1.875rem; /* 30px */
+  --line-height-3xl: 2.4rem; /* ~38px */
+
+  --font-size-4xl: 2.25rem; /* 36px */
+  --line-height-4xl: 2.65rem; /* ~42px */
+
+  --font-size-5xl: 3rem; /* 48px */
+  --line-height-5xl: 1.15; /* ~55px */
+
+  --font-size-6xl: 3.75rem; /* 60px */
+  --line-height-6xl: 1.15; /* ~69px */
+
+  --font-size-7xl: 4.5rem; /* 72px */
+  --line-height-7xl: 1.15; /* ~83px */
+
+  --font-size-8xl: 6rem; /* 96px */
+  --line-height-8xl: 1.15; /* ~110px */
+
+  --font-size-9xl: 8rem; /* 128px */
+  --line-height-9xl: 1.15; /* ~147px */
+
+  // Form
+  --input-border-color: transparent;
+  --input-border-color-focus: var(--color-primary);
+  --input-border-bg: #f9fafb;
+  --input-border-radius: 8px;
+  --input-box-shadow: 0 0 2px 0px #919eab;
+  --input-padding: 0.8rem;
+
+  // Border Radius
+  --card-default-border-radius: 8px;
+  --cart-default-padding: 1rem;
+
+  // Swiper
+  --swiper-pagination-bullet-size: 6px;
+  --swiper-navigation-color: var(--color-primary);
+  --swiper-pagination-color: var(--color-primary);
+}
+
+:root {
+  --full-height: 100vh;
+}
+
+// CSS Fallback Using Custom Properties
+@supports (height: 100dvh) {
+  :root {
+    --full-height: 100dvh;
+  }
+}

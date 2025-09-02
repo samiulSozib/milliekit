@@ -1,0 +1,37 @@
+.skeleton {
+  animation: loading 2s infinite linear;
+  -webkit-mask-image: linear-gradient(
+    130deg,
+    transparent 0,
+    #e1e3e1 20%,
+    white 40%,
+    transparent 60%,
+    #e1e3e1 80%,
+    white 100%
+  );
+  mask-image: linear-gradient(130deg, transparent 0, #e1e3e1 20%, white 40%, transparent 60%, #e1e3e1 80%, white 100%);
+  -webkit-mask-size: 300% 100%;
+  mask-size: 300% 100%;
+}
+
+@keyframes loading {
+  0% {
+    -webkit-mask-position: right;
+    mask-position: right;
+  }
+  100% {
+    -webkit-mask-position: left;
+    mask-position: left;
+  }
+}
+
+.skeletonItem {
+  background: #eff2ef;
+}
+
+.skeleton__title {
+  background: #eff2ef;
+  border-radius: 20px;
+  height: 38px;
+  width: 300px;
+}

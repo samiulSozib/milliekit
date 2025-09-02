@@ -1,0 +1,18 @@
+.StackedBanners {
+  &__inner {
+    position: relative;
+    width: 100%;
+    height: 270px;
+    @media screen and (max-width: 600px) {
+      height: calc(100vw / 2.5);
+    }
+  }
+
+  &__card {
+    position: absolute;
+    width: 100%;
+    border-radius: 16px;
+    transform-origin: top center;
+    overflow: hidden;
+  }
+}

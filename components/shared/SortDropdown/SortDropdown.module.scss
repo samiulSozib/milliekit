@@ -1,0 +1,36 @@
+.sortDropdown {
+  position: relative;
+}
+
+.sortDropdown__list {
+  position: absolute;
+  background: #fff;
+  color: var(--color-global);
+  z-index: var(--z-30);
+  width: 100%;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
+  pointer-events: none;
+  user-select: none;
+  visibility: hidden;
+  transform: translateY(10px);
+}
+
+.--is-open {
+  .sortDropdown__button {
+    border-bottom-color: transparent;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+
+    &__arrow {
+      transform: rotate(-180deg);
+    }
+  }
+
+  .sortDropdown__list {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    transform: translateY(0);
+  }
+}

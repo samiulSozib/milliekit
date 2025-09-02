@@ -1,0 +1,25 @@
+.success-bg {
+  @apply bg-[rgba(0,171,85,0.12)];
+}
+
+.success-shadow {
+  @apply shadow-[0px_0px_2px_#00AB55];
+}
+
+.cancelled-bg,
+.failed-bg {
+  @apply bg-[rgba(255,72,66,0.12)];
+}
+
+.cancelled-shadow,
+.failed-shadow {
+  @apply shadow-[0px_0px_2px_#FF4842];
+}
+
+.pending-bg {
+  @apply bg-[rgba(255,193,7,0.12)];
+}
+
+.pending-shadow {
+  @apply shadow-[0px_0px_2px_#FFC107];
+}

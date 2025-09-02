@@ -1,0 +1,8 @@
+.FormControl {
+  position: relative;
+
+  &__label {
+    font-size: var(--font-size-xs);
+    color: var(--color-gray-700);
+  }
+}

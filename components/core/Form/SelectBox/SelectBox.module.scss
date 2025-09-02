@@ -1,0 +1,22 @@
+.Select {
+  :global(.select__control) {
+    height: 3rem;
+    border-radius: 6px;
+    border: 1px solid var(--input-border-color);
+    box-shadow: var(--input-box-shadow) !important;
+    transition: all 0.3s ease 0s;
+    background: var(--input-border-bg);
+
+    &:hover,
+    &:focus {
+      // border-color: red;
+      // box-shadow: 0 0 0 1px red;
+      border-color: var(--input-border-color-focus);
+      box-shadow: none;
+    }
+
+    :global(.select__indicator-separator) {
+      display: none !important;
+    }
+  }
+}

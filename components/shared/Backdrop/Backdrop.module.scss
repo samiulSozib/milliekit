@@ -1,0 +1,15 @@
+.Backdrop {
+  position: absolute;
+  width: 100%;
+  height: var(--full-height);
+  top: 0;
+  left: 0;
+
+  background: linear-gradient(257deg, #161c24 0%, rgba(22, 28, 36, 0.48) 91.29%);
+}
+
+[dir='ltr'] {
+  .Backdrop {
+    background: linear-gradient(-257deg, #161c24 0%, rgba(22, 28, 36, 0.48) 91.29%);
+  }
+}
