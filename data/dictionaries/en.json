@@ -299,6 +299,10 @@
     "ticketAttached": "Ticket attached as image.",
     "withCommission": "With Commission",
     "withoutCommission": "Without Commission",
-    "commissionMethodRequired": "Please select a commission method"
+    "commissionMethodRequired": "Please select a commission method",
+    "moneyTransfer":"Money Transfer",
+    "privacyPolicy": "Privacy Policy",
+    "lastUpdated": "Last Updated",
+    "tryAgain": "Try Again"
   }
 }

@@ -299,6 +299,10 @@
     "ticketAttached": "بلیط به صورت تصویر پیوست شد",
     "withCommission": "با کمیسیون",
     "withoutCommission": "بدون کمیسیون",
-    "commissionMethodRequired": "لطفاً یک روش کمیسیون انتخاب کنید"
+    "commissionMethodRequired": "لطفاً یک روش کمیسیون انتخاب کنید",
+    "moneyTransfer": "انتقال پول",
+    "privacyPolicy": "سیاست حفظ حریم خصوصی",
+    "lastUpdated": "آخرین بروزرسانی",
+    "tryAgain": "تلاش مجدد"
   }
 }

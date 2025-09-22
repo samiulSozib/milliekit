@@ -11,3 +11,5 @@ export * from './ticket';
 export * from './location';
 export * from './transaction';
 export * from './credit-transfer';
+export * from './money-transfer';
+export * from './page'

@@ -81,6 +81,13 @@ const tools = (dictionary: Awaited<ReturnType<typeof getDictionary>>) => [
     link: '/top-up',
   },
   {
+    icon: GlobalIcon,
+    title: dictionary.general.moneyTransfer,
+    color: '#1C1678',
+    isDisabled: false,
+    link: '/money-transfer',
+  },
+  {
     icon: CallIcon,
     title: dictionary.general.conversationPackage,
     color: '#FF9500',

@@ -297,6 +297,10 @@
     "ticketAttached": "ټکټ د عکس په توګه نښلول شوی",
     "withCommission": "د کمیسیون سره",
     "withoutCommission": "بې له کمیسیون",
-    "commissionMethodRequired": "مهرباني وکړئ د کمیسیون میتود انتخاب کړئ"
+    "commissionMethodRequired": "مهرباني وکړئ د کمیسیون میتود انتخاب کړئ",
+    "moneyTransfer": "د پیسو لېږد",
+    "privacyPolicy": "د محرمیت تګلاره",
+    "lastUpdated": "وروستی تازه کول",
+    "tryAgain": "بیا هڅه وکړئ"
   }
 }

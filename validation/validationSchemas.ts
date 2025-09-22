@@ -128,3 +128,24 @@ export const faqFilterFormSchema = object().shape({
   category: string().trim().nullable(),
   search: string().trim().nullable(),
 });
+
+
+export const moneyTransferFormSchema = object().shape({
+  amount: string().trim().required('requiredField'),
+  mobile_or_email: string()
+    .trim()
+    .required('requiredField')
+    .test('mobile_or_email', 'mobileNumberValidation', (value) => {
+      if (!value) return false; // Required field
+      return phoneRegex.test(value);
+    }),
+  commission_method:string()
+  .oneOf(['amount_with_commission', 'amount_without_commission'])
+  .required('commissionMethodRequired'),
+});
+
+export const moneyTransferListFilterFormSchema = object().shape({
+  date: string().trim().nullable(),
+  type: string().trim().nullable(),
+  search: string().trim().nullable(),
+});

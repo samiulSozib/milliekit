@@ -30,6 +30,14 @@ export const apiPathConfig = {
     base: API_BASE_URL + '/common/recharges',
     details: API_BASE_URL + '/common/recharges/{{transferId}}/show',
   },
+  moneyTransfer:{
+    base:API_BASE_URL+'/common/transfers',
+    details:API_BASE_URL+'/common/transfers'
+  },
+  pages: {
+    //base: API_BASE_URL + '/web/pages', // for listing available pages
+    details: API_BASE_URL + '/web/pages/{{pageName}}/show', // e.g. Privacy & Policy
+  },
 } as const;
 
 export const appDesktopScreenSize = 1024;
@@ -124,6 +132,10 @@ export const routeList = {
     id: 'profile',
     path: '/profile',
   },
+  moneyTransfer:{
+    id:'mooney-transfer',
+    path:"/money-transfer"
+  }
 } as const;
 
 export const bottomNavigationList = [
