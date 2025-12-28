@@ -76,6 +76,17 @@ export const filterFormSchema = object().shape({
   'route-id': string().trim().nullable(),
 });
 
+export const taxiFilterFormSchema = object().shape({
+  'origin-city-id': string().trim().nullable().required('requiredField'),
+  'destination-city-id': string().trim().nullable().required('requiredField'),
+  'passenger-count': string().trim().nullable().required('requiredField'),
+  'departure-time': string().trim().nullable().required('requiredField'),
+
+  'route-id': string().trim().nullable(),
+  'trip-type':string().trim(),
+  'return-time':string().trim()
+});
+
 export const searchFormSchema = object().shape({
   phone: string()
     .trim()

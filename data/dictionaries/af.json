@@ -33,7 +33,9 @@
     "success": "موفقیت",
     "failed": "ناموفق",
     "pending": "درحال انتظار",
-    "cancelled": "لغو شده"
+    "cancelled": "لغو شده",
+        "warning":"Warning"
+
   },
   "dialogs": {
     "readyForLogout": "آیا برای خروج از حساب کاربری آماده هستید؟",
@@ -301,6 +303,38 @@
     "moneyTransfer": "د پیسو لېږد",
     "privacyPolicy": "د محرمیت تګلاره",
     "lastUpdated": "وروستی تازه کول",
-    "tryAgain": "بیا هڅه وکړئ"
+    "tryAgain": "بیا هڅه وکړئ",
+    "taxiBooking":"Taxi Booking",
+    "oneWay":"One Way",
+    "roundTrip":"Round Trip",
+    "swapCities":"Swap Cities",
+        "returnDate":"Return Date",
+        "issuedTicket":"Issued Ticket",
+    "completed":"Completed",
+    "cancelled":"Cancelled",
+    "route":"Route",
+        "warning":"Warning",
+        "refundPolicy":"Refund Policy",
+    "seatsAvailable":"Seats available",
+    "fullCapacity":"Full Capacity",
+    "via":"Via",
+    "dropoffLocation":"Dropp off Location",
+    "pickupLocation":"Pick Up Location",
+    "fastestOption":"Fastest Options",
+    "rating":"Rating",
+    "bookNow":"Book Now",
+    "fastest":"Fastest",
+    "perPerson":"Per Person",
+    "taxiInformation": "Taxi Information",
+    "refundPolicyDescription1": "Cancellations made 24 hours before departure receive full refund.",
+    "refundPolicyDescription2": "Cancellations within 24 hours receive 50% refund.",
+    "refundPolicyDescription3": "No-shows are not eligible for refund.",
+    "refundPolicyDescription4": "Refunds are processed within 5-7 business days.",
+    "refundPolicySummary": "Refund Summary",
+    "cancellationBefore24h": "• 24+ hours before: 100% refund",
+    "cancellationWithin24h": "• Within 24 hours: 50% refund", 
+    "noShowPolicy": "• No-show: No refund"
+
+
   }
 }

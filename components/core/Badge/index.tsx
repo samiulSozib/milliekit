@@ -1,11 +1,12 @@
 import { useSettings } from '@/components/core/hooks/useSettings';
 
-export const badgeStatusMap: Record<'success' | 'failed' | 'pending' | 'cancelled', { bg: string; textColor: string }> =
+export const badgeStatusMap: Record<'success' | 'failed' | 'pending' | 'cancelled'|'warning', { bg: string; textColor: string }> =
   {
     success: { bg: 'success-bg', textColor: 'text-success' },
     failed: { bg: 'failed-bg', textColor: 'text-error' },
     pending: { bg: 'pending-bg', textColor: 'text-notice' },
     cancelled: { bg: 'failed-bg', textColor: 'text-error' },
+    warning: { bg: 'failed-bg', textColor: 'text-error' },
   };
 
 export interface IBadge {

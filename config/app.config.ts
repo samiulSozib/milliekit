@@ -78,6 +78,24 @@ export const routeList = {
       },
     },
   },
+  taxiBooking: {
+    id: 'taxi-booking',
+    path: '/taxi-booking',
+    subPathList: {
+      results: {
+        id: 'results',
+        path: '/taxi-booking/results',
+      },
+      seatSelection: {
+        id: 'select-seat',
+        path: '/taxi-booking/select-seat',
+      },
+      supervisorInfo: {
+        id: 'supervisor-information',
+        path: '/taxi-booking/supervisor-information',
+      },
+    },
+  },
   transactions: {
     id: 'transactions',
     path: '/transactions',

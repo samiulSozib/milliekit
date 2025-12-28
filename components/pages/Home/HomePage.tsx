@@ -50,11 +50,10 @@ const tools = (dictionary: Awaited<ReturnType<typeof getDictionary>>) => [
   },
   {
     icon: TaxiPinIcon,
-    title: dictionary.general.taxiTicket,
+    title: dictionary.general.taxiBooking,
     color: '#A2845E',
     iconWidth: 35,
     link: '/taxi-booking',
-    isDisabled:true
 
   },
   {
