@@ -30,6 +30,7 @@
 
 
 // Component Imports
+// Component Imports
 import Providers from '@components/Providers';
 import { getSystemDictionary, getSystemLang } from '@/utils/server-helpers';
 import NextLoader from 'nextjs-rtl-loader';
@@ -38,11 +39,17 @@ import NextLoader from 'nextjs-rtl-loader';
 import type { Locale } from '@configs/i18n';
 import type { ChildrenType } from '@/types';
 
-const Layout = async (props: ChildrenType & { params: Promise<{ lang: Locale }> }) => {
-  const { children, params } = props;
+// Define the params type
+interface LayoutProps {
+  children: React.ReactNode;
+  params: {
+    lang: Locale;
+  };
+}
 
+const Layout = async ({ children, params }: LayoutProps) => {
   // Vars
-  const { lang } = await params;
+  const { lang } = params;
   const systemLang = await getSystemLang();
 
   const _lang = (systemLang ?? lang) as Locale;
