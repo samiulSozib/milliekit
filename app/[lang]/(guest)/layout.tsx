@@ -32,20 +32,22 @@
 // Component Imports
 // Component Imports
 // Component Imports
+// Component Imports
 import Providers from '@components/Providers';
 import { getSystemDictionary, getSystemLang } from '@/utils/server-helpers';
 import NextLoader from 'nextjs-rtl-loader';
 
 // Type Imports
 import type { Locale } from '@configs/i18n';
-import type { ChildrenType } from '@/types';
 
-const Layout = async (props: ChildrenType & { params: Promise<{ lang: string }> }) => {
-  const { children, params } = props;
-
-  // Vars - NOTE: params is now a Promise, so we need to await it
-  const resolvedParams = await params;
-  const lang = resolvedParams.lang as Locale; // Cast to Locale type
+export default async function Layout({
+  children,
+  params,
+}: {
+  children: React.ReactNode;
+  params: Promise<{ lang: string }>;
+}) {
+  const { lang } = await params;
   const systemLang = await getSystemLang();
 
   const _lang = (systemLang ?? lang) as Locale;
@@ -58,6 +60,4 @@ const Layout = async (props: ChildrenType & { params: Promise<{ lang: string }> 
       {children}
     </Providers>
   );
-};
-
-export default Layout;
+}
