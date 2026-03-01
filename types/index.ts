@@ -15,3 +15,5 @@ export * from './money-transfer';
 export * from './page';
 export * from './taxi-transaction';
 export * from './taxi-trip'
+export * from './network'
+export * from './network-wallet-transaction'

@@ -78,11 +78,13 @@ export default function MobileBar() {
             isActive={routeList.orders.path.includes(activeRoute.path)}
             onChangeRoute={() => handleChangeRoute(getLocalizedUrl(routeList.orders.path, locale as Locale))}
           />
+          
           <NavItem
             icon={<NetworkIcon width="24" />}
             iconFilled={<NetworkFilledIcon width="24" />}
             title={dictionary.navigation.network}
             isActive={routeList.network.path.includes(activeRoute.path)}
+            onChangeRoute={() => handleChangeRoute(getLocalizedUrl(routeList.network.path, locale as Locale))}
           />
         </div>
       </div>

@@ -1,4 +1,6 @@
-export const API_BASE_URL = 'https://api.milliekit.com/api/v1';
+import { details } from "framer-motion/client";
+
+export const API_BASE_URL = 'https://bus-booking-api-v2.milliekit.com/api/v1';
 export const apiPathConfig = {
   login: API_BASE_URL + '/auth',
   logout: API_BASE_URL + '/auth/logout',
@@ -38,6 +40,17 @@ export const apiPathConfig = {
     //base: API_BASE_URL + '/web/pages', // for listing available pages
     details: API_BASE_URL + '/web/pages/{{pageName}}/show', // e.g. Privacy & Policy
   },
+  networks:{
+    base:API_BASE_URL+'/customer/users',
+    details:API_BASE_URL+'/customer/users'
+  },
+  wallets: {
+  subCustomers: {
+    base: API_BASE_URL+'/customer/wallets/sub-customers',
+    details:API_BASE_URL+'/customer/wallets/sub-customers',
+  },
+},
+
 } as const;
 
 export const appDesktopScreenSize = 1024;
@@ -154,6 +167,7 @@ export const routeList = {
     id:'mooney-transfer',
     path:"/money-transfer"
   }
+  
 } as const;
 
 export const bottomNavigationList = [

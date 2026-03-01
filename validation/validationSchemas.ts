@@ -160,3 +160,158 @@ export const moneyTransferListFilterFormSchema = object().shape({
   type: string().trim().nullable(),
   search: string().trim().nullable(),
 });
+
+export const networkSearchSchema = object().shape({
+  name: string().optional(),
+  phoneNumber: string().optional(),
+  searchType: string().oneOf(['name', 'phone']).default('name'),
+});
+
+
+
+
+// export const networkCreateFormSchema = object().shape({
+//   first_name: string()
+//     .trim()
+//     .required('requiredField'),
+
+//   last_name: string()
+//     .trim()
+//     .required('requiredField'),
+
+//   email: string()
+//     .trim()
+//     .email('invalidEmail')
+//     .nullable()
+//     .notRequired(),
+
+//   mobile: string()
+//     .trim()
+//     .required('requiredField')
+//     .test('mobile', 'mobileNumberValidation', (value) => {
+//       if (!value) return false;
+//       return phoneRegex.test(value);
+//     }),
+
+//   password: string()
+//     .trim()
+//     .required('requiredField')
+//     .min(6, 'passwordMinLength'),
+
+//   price_adjust_type: string()
+//     .oneOf(['increase', 'decrease'])
+//     .nullable()
+//     .notRequired(),
+
+//   price_adjust_mode: string()
+//     .oneOf(['percentage', 'fixed'])
+//     .nullable()
+//     .notRequired(),
+
+//   price_adjust_value: number()
+//     .nullable()
+//     .notRequired()
+//     .when(['price_adjust_type', 'price_adjust_mode'], {
+//       is: (type: string, mode: string) => !!type && !!mode,
+//       then: (schema) =>
+//         schema.required('requiredField').min(0, 'invalidValue'),
+//     }),
+// });
+
+
+
+export const networkCreateFormSchema = object().shape({
+  first_name: string()
+    .trim()
+    .required('requiredField'),
+
+  last_name: string()
+    .trim()
+    .required('requiredField'),
+
+  email: string()
+    .trim()
+    .email('invalidEmail')
+    .nullable()
+    .notRequired(),
+
+  mobile: string()
+    .trim()
+    .required('requiredField')
+    .test('mobile', 'mobileNumberValidation', (value) => {
+      if (!value) return false;
+      return phoneRegex.test(value);
+    }),
+
+  password: string()
+    .trim()
+    .required('requiredField')
+    .min(6, 'passwordMinLength'),
+
+  price_adjust_type: string()
+    .oneOf(['increase', 'decrease'])
+    .nullable()
+    .notRequired(),
+
+  price_adjust_mode: string()
+    .oneOf(['percentage', 'fixed'])
+    .nullable()
+    .notRequired(),
+
+  price_adjust_value: number()
+    .nullable()
+    .notRequired()
+    .when(['price_adjust_type', 'price_adjust_mode'], {
+      is: (type: string, mode: string) => !!type && !!mode,
+      then: (schema) =>
+        schema.required('requiredField').min(0, 'invalidValue'),
+    }),
+});
+
+export const networkEditFormSchema = object().shape({
+  first_name: string()
+    .trim()
+    .required('requiredField'),
+
+  last_name: string()
+    .trim()
+    .required('requiredField'),
+
+  email: string()
+    .trim()
+    .email('invalidEmail')
+    .nullable()
+    .notRequired(),
+
+  mobile: string()
+    .trim()
+    .required('requiredField')
+    .test('mobile', 'mobileNumberValidation', (value) => {
+      if (!value) return false;
+      return phoneRegex.test(value);
+    }),
+
+  password: string()
+    .trim()
+    .optional(),
+    //.min(6, 'passwordMinLength'),
+
+  price_adjust_type: string()
+    .oneOf(['increase', 'decrease'])
+    .nullable()
+    .notRequired(),
+
+  price_adjust_mode: string()
+    .oneOf(['percentage', 'fixed'])
+    .nullable()
+    .notRequired(),
+
+  price_adjust_value: number()
+    .nullable()
+    .notRequired()
+    .when(['price_adjust_type', 'price_adjust_mode'], {
+      is: (type: string, mode: string) => !!type && !!mode,
+      then: (schema) =>
+        schema.required('requiredField').min(0, 'invalidValue'),
+    }),
+});

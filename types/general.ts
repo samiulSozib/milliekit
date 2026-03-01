@@ -40,3 +40,10 @@ export type ServerEntityGetDetailsResponseType<T> = {
   item: T;
 };
 
+
+
+// for network
+export type ServerBaseResponseType = {
+  success: boolean;
+  message: string;
+};
