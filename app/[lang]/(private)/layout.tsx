@@ -11,24 +11,19 @@ export type Locale = 'en' | 'fa' | 'af';
 
 interface LayoutProps {
   children: ReactNode;
-  params: { lang: string }; // string first, convert to Locale below
+  params: { lang: string }; // sync, not a Promise
 }
 
-// Sync wrapper for type safety
-export default function LayoutWrapper(props: LayoutProps) {
-  return <AsyncLayout {...props} />;
-}
-
-// Async server component
-async function AsyncLayout({ children, params }: LayoutProps) {
-  // ⚡ Convert string to strict Locale
+// Direct async export
+export default async function Layout({ children, params }: LayoutProps) {
+  // Validate Locale
   const langCandidate = params.lang.toLowerCase();
   const validLocales: Locale[] = ['en', 'fa', 'af'];
   const lang: Locale = validLocales.includes(langCandidate as Locale)
     ? (langCandidate as Locale)
     : 'en';
 
-  // Get system language & dictionary
+  // Fetch system lang & dictionary
   const systemLang = await getSystemLang();
   const _lang: Locale = systemLang ?? lang;
   const direction = _lang === 'en' ? 'ltr' : 'rtl';
