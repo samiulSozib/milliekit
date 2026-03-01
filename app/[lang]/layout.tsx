@@ -14,7 +14,7 @@ import '../../scss/globals.scss';
 
 import type { Metadata, Viewport } from 'next';
 import type { ChildrenType } from '@/types';
-import type { Locale } from '@/config';
+import type { Locale } from '@/config'; // Assuming this exports 'en' | 'fa' | 'af'
 
 export const metadata: Metadata = {
   title: 'ملی کیت | زندگی هوشمند',
@@ -34,19 +34,24 @@ export const metadata: Metadata = {
 
 export const viewport: Viewport = { width: 'device-width', initialScale: 1, maximumScale: 1, userScalable: false };
 
-const RootLayout = async (props: ChildrenType & { params: Promise<{ lang: Locale }> }) => {
-  const params = await props.params;
+interface RootLayoutProps extends ChildrenType {
+  params: Promise<{ lang: Locale }>;
+}
 
-  const { children } = props;
+const RootLayout = async ({ children, params }: RootLayoutProps) => {
+  // Await the params
+  const { lang } = await params;
 
   const headersList = await headers();
   const systemLang = await getSystemLang();
-  // const systemMode = await getSystemMode();
-  const direction = i18n.langDirection[systemLang as Locale];
+  
+  // Determine which language to use (params.lang should already be validated by the type)
+  const activeLang = systemLang as Locale || lang;
+  const direction = i18n.langDirection[activeLang];
 
   return (
-    <TranslationWrapper headersList={headersList} lang={params.lang} systemLang={systemLang as Locale}>
-      <html id="__next" lang={systemLang as Locale} dir={direction} suppressHydrationWarning>
+    <TranslationWrapper headersList={headersList} lang={lang} systemLang={systemLang as Locale}>
+      <html id="__next" lang={activeLang} dir={direction} suppressHydrationWarning>
         <body>
           <SVGSymbols />
           {children}
@@ -59,5 +64,3 @@ const RootLayout = async (props: ChildrenType & { params: Promise<{ lang: Locale
 };
 
 export default RootLayout;
-
-
