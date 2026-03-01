@@ -14,7 +14,7 @@ import '../../scss/globals.scss';
 
 import type { Metadata, Viewport } from 'next';
 import type { ChildrenType } from '@/types';
-import type { Locale } from '@/config'; // Assuming this exports 'en' | 'fa' | 'af'
+import type { Locale } from '@/config';
 
 export const metadata: Metadata = {
   title: 'ملی کیت | زندگی هوشمند',
@@ -35,18 +35,25 @@ export const metadata: Metadata = {
 export const viewport: Viewport = { width: 'device-width', initialScale: 1, maximumScale: 1, userScalable: false };
 
 interface RootLayoutProps extends ChildrenType {
-  params: Promise<{ lang: Locale }>;
+  params: Promise<{ lang: string }>; // Changed from Locale to string
 }
 
 const RootLayout = async ({ children, params }: RootLayoutProps) => {
   // Await the params
-  const { lang } = await params;
+  const { lang: langParam } = await params;
+
+  // Validate the locale (same as in private layout)
+  const validLocales: Locale[] = ['en', 'fa', 'af'];
+  const langCandidate = langParam.toLowerCase();
+  const lang: Locale = validLocales.includes(langCandidate as Locale)
+    ? (langCandidate as Locale)
+    : 'en';
 
   const headersList = await headers();
   const systemLang = await getSystemLang();
   
-  // Determine which language to use (params.lang should already be validated by the type)
-  const activeLang = systemLang as Locale || lang;
+  // Determine which language to use
+  const activeLang = (systemLang as Locale) || lang;
   const direction = i18n.langDirection[activeLang];
 
   return (
