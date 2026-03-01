@@ -11,13 +11,16 @@ export type Locale = 'en' | 'fa' | 'af';
 
 interface LayoutProps {
   children: ReactNode;
-  params: { lang: string }; // sync, not a Promise
+  params: Promise<{ lang: string }>; // params is now a Promise in Next.js 15
 }
 
-// Direct async export
+// Direct async export - await the params
 export default async function Layout({ children, params }: LayoutProps) {
+  // Await the params
+  const { lang: langParam } = await params;
+  
   // Validate Locale
-  const langCandidate = params.lang.toLowerCase();
+  const langCandidate = langParam.toLowerCase();
   const validLocales: Locale[] = ['en', 'fa', 'af'];
   const lang: Locale = validLocales.includes(langCandidate as Locale)
     ? (langCandidate as Locale)
